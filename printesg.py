@@ -70,7 +70,7 @@ PRICE
 """
 
 
-block = """<div style="border: 2px solid black; text-align:center; overflow:hidden; width:400px; clear=both;">
+block = """<div style="border: 2px solid black; text-align:center; overflow:hidden; width:400px; clear=both; padding:30px;">
 <span style="font-size:x-large; font-family:Lato; font-weight:800;">TITLE gg<em>gg</em></span><br/>
 <b>ARTIST ggg</b><br/>
 MEDIUM ggg<br/>
@@ -82,8 +82,8 @@ PRICE
 
 block2 = block.replace('">',' border-top: 0;">',1)
 
-block3 = """<p>&nbsp;</p><div style="border-top: 2px solid black; overflow:hidden; width:400px; clear=both; text-alicg:center; color: white">
-<span style="font-size:x-large; font-family:Lato;">TITLE gggg</span><br/>
+block3 = """<p>&nbsp;</p><div style="border: 2px solid black; overflow:hidden; width:400px; clear=both; text-alicg:center; color: white; border-bottom: 0; padding:30px;">
+<span style="font-size:x-large; font-family:Lato; ">TITLE gggg</span><br/>
 <b>ARTIST ggg</b><br/>
 MEDIUM ggg<br/>
 DIMENSIONS<br/>
@@ -96,7 +96,7 @@ outfnam = "test.html"
 
 outf = open(outfnam,"w")
 
-content = block + block3 + block2 + separator + block
+content = block + block3 + block2 + separator +"<p>next page</p>"
 
 outtext = template.replace("%CONTENT",content)
 
